@@ -12,7 +12,7 @@
 }
 
 .btn{
-
+  background-color: white;
 }
 
 .App-header {
@@ -48,8 +48,8 @@ h1{
 .boton{
   font-size: 17px;
   width: fit-content;
-  border-color: #6dc092;
-  color: #6dc092;
+  border-color: #65B61B;
+  color: #65B61B;
   background-color: white;
   margin-left: 20px;
   margin-bottom: 20px;
@@ -66,7 +66,7 @@ h1{
 }
 
 .progress-bar{
-  background-color: green;
+  background-color: #65B61B;
   width: 8%;
 }
 
@@ -88,13 +88,62 @@ h2{
 
 .avaliable{
   width: fit-content;
-  background-color: #6dc092;
+  background-color: #65B61B;
+  border-color: #65B61B;
   font-size: 10px;
 }
 
 .btn-info:hover {
   background-color: #057545;
   border-color: #057545;
+}
+
+.btn-default {
+  font-family: Raleway-SemiBold;
+  font-size: 13px;
+  color: #9A9895;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid #9A9895;
+  border-radius: 40px;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-default:hover {
+  color: #FFF;
+  background: #9A9895;
+  border: 2px solid #9A9895;
+}
+
+h3{
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.street{
+  font-size: 14px;
+  font-weight: bold;
+  color: #9A9895;
+}
+
+a{
+  color: #65B61B
+}
+
+a:hover{
+  color: #057545;
+  text-decoration: none;
+}
+
+.skills{
+  display: flex;
+  flex-direction: row;
+}
+
+th{
+  color: grey;
 }
 
 
