@@ -4,7 +4,26 @@ import './App.css';
 import Lawyer from './Lawyer.jpg';
 
 class App extends Component {
-  render() {
+    constructor() {
+        super();
+        this.state = {
+            shown: true,
+        };
+    }
+    toggle() {
+        this.setState({
+            shown: !this.state.shown
+        });
+    }
+    render() {
+        const shown = {
+            display: this.state.shown ? "block" : "none"
+        };
+
+        const hidden = {
+            display: this.state.shown ? "none" : "block"
+        };
+
     return (
       <div className="App">
         <header className="App-header">
@@ -132,10 +151,80 @@ class App extends Component {
                     </table>
                 </div>
                 <div className="column">
-                <p>Columna2</p>
+                    <h2>Services</h2>
+                    <h2 style={{color:"#65B61B" , fontWeight:"inherit"}}>Construction and real state law</h2>
+                    <div className="card">
+                        <div className="card-header" id="headingOne">
+                            <h5 className="mb-0">
+                                <div className="row1">
+                                <h2 className="thide" style={shown}>Builder's lien law</h2>
+                                    <h2 className="tshow" style={hidden}>Builder's lien law</h2>
+                                <button className="btn hide" data-toggle="collapse" data-target="#collapseOne"
+                                                 aria-expanded="true" aria-controls="collapseOne" onClick={this.toggle.bind(this)}>
+                                    <p style={ shown }>Hide <i className="fa fa-angle-up"></i></p>
+                                    <p style={ hidden }>Show <i className="fa fa-angle-down"></i></p>
+                                </button>
+                                </div>
+                                <p style={ hidden }><i className="fa fa-plus-square-o" style={{fontSize:15}}>  </i>
+                                    <i className="fa fa-star" style={{fontSize:15 , color:"#ffe714"}}></i>
+                                    <i className="fa fa-star" style={{fontSize:15 , color:"#ffe714"}}></i>
+                                    <i className="fa fa-star" style={{fontSize:15 , color:"#ffe714"}}></i>
+                                    <i className="fa fa-star" style={{fontSize:15 , color:"#ffe714"}}></i>
+                                    <i className="fa fa-star" style={{fontSize:15 , color:"#ffe714"}}></i> 35 CHF per hour </p>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" className="collapse show" aria-labelledby="headingOne"
+                             data-parent="#accordion">
+                            <div className="card-body">
+                                <p className="feeTable"> Fee </p>
+                                <p className="CHF"> 35 CHF per hour </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="card">
+                        <div className="card-header" id="headingOne">
+                            <h5 className="mb-0">
+                                <div className="row1">
+                                    <h2 className="thide" style={shown}>Builder's lien law</h2>
+                                    <h2 className="tshow" style={hidden}>Builder's lien law</h2>
+                                    <button className="btn hide" data-toggle="collapse" data-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne" onClick={this.toggle.bind(this)}>
+                                        <p style={ shown }>Hide <i className="fa fa-angle-up"></i></p>
+                                        <p style={ hidden }>Show <i className="fa fa-angle-down"></i></p>
+                                    </button>
+                                </div>
+                                <p style={ hidden }><i className="fa fa-plus-square-o" style={{fontSize:15}}>  </i>
+                                    <i className="fa fa-star" style={{fontSize:15 , color:"#ffe714"}}></i>
+                                    <i className="fa fa-star" style={{fontSize:15 , color:"#ffe714"}}></i>
+                                    <i className="fa fa-star" style={{fontSize:15 , color:"#ffe714"}}></i>
+                                    <i className="fa fa-star" style={{fontSize:15 , color:"#ffe714"}}></i>
+                                    <i className="fa fa-star" style={{fontSize:15 , color:"#ffe714"}}></i> 35 CHF per hour </p>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" className="collapse show" aria-labelledby="headingOne"
+                             data-parent="#accordion">
+                            <div className="card-body">
+                                <p className="feeTable"> Fee </p>
+                                <p className="CHF"> 35 CHF per hour </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
                 </div>
             </div>
         </main>
+          <hr/>
+          <footer>
+              <div style={{marginLeft:60}}>
+              <hr/>
+              </div>
+              <div className="footer">
+                  <p style={{color:"#9A9895"}}>Copyright&#x24B8; MELANIA OGALLA</p>
+                  <p style={{fontWeight:"bold"}}> <a href="#">Help</a> | <a href="#">Report error</a></p>
+              </div>
+          </footer>
       </div>
     );
   }

@@ -146,6 +146,51 @@ th{
   color: grey;
 }
 
+.footer{
+  margin-left: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hide{
+  font-size: 20px;
+  color: #65B61B;
+}
+
+.feeTable{
+  font-size: 20px;
+}
+
+.CHF{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.thide{
+  color:#65B61B;
+  font-weight:inherit
+}
+
+.tshow{
+  color: black;
+  font-weight: inherit
+}
+
+
 
 
 
